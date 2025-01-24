@@ -4,11 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Meyawo landing page.">
-    <meta name="author" content="Devcrud">
+    <meta name="description" content="Start your development with TDL Webcraft.">
+    <meta name="author" content="TDL Webcraft">
     <title>TDL Webcraft</title>
     <link rel="stylesheet" href="../assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -59,13 +60,17 @@
             <!-- vloerwerkendelaere wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <img src="../assets/images/Vloerwerken Delaere/homepage.PNG" class="about-img" alt="vloerwerkendelaere">
+                    <img src="../assets/images/Vloerwerken Delaere/homepage.PNG" class="about-img"
+                        alt="vloerwerkendelaere">
                 </div>
                 <div class="about-caption">
                     <h2 class="section-title mb-3">Website Vloerwerken Delaere <Del></Del></h2>
                     <p>
-                        Een statische website ontworpen en gebouwd met HTML, CSS en JavaScript voor het vloerwerkbedrijf Vloerwerken Delaere van mijn vader.
-                         De website is eenvoudig, gebruiksvriendelijk en biedt een professioneel online visitekaartje voor het bedrijf.
+                        Een statische website ontworpen en gebouwd met HTML, CSS en JavaScript voor het vloerwerkbedrijf
+                        Vloerwerken Delaere van mijn vader.
+                        De website is eenvoudig, gebruiksvriendelijk en biedt een professioneel online visitekaartje
+                        voor het bedrijf.
+                        Bezoek de site hieronder.
                     </p>
                     <a href="https://www.vloerwerkendelaere.be">
                         <button class="btn-rounded btn btn-outline-primary mt-4">Bezoek site</button>
@@ -84,29 +89,44 @@
                 <div class="about-caption">
                     <h2 class="section-title mb-3">Uitleensysteem De Varens <Del></Del></h2>
                     <p>
-                        Een uitgebreid uitleensysteem ontwikkeld binnen het bestaande Blazor-project van de school De Varens.
-                        Dit systeem bevat verschillende materiaalpagina’s, zoals multimedia, boeken, sleutels, printkaarten en andere items. 
-                        Elke pagina heeft volledige CRUD-functionaliteit, waarmee beheerders materialen kunnen toevoegen, bewerken, bekijken en verwijderen.
+                        Een uitgebreid uitleensysteem ontwikkeld binnen het bestaande Blazor-project van de school De
+                        Varens.
+                        Dit systeem bevat verschillende materiaalpagina’s, zoals multimedia, boeken, sleutels,
+                        printkaarten en andere items.
+                        Elke pagina heeft volledige CRUD-functionaliteit, waarmee beheerders materialen kunnen
+                        toevoegen, bewerken, bekijken en verwijderen.
 
                         <tr>
-                            <td><p class="font-weight-bold text-muted">Belangrijke functies:</p></td>
                             <td>
-                               <ul >
-                                  <li>Materialen uitlenen en retourneren.</li>
-                                  <li>Een overzicht van uitleengeschiedenis per item.</li>
-                                  <li>Een personeelsbeheerpagina met uitleengeschiedenis.</li>
-                                  <li>Een categoriepagina voor verschillende materiaalsoorten.</li>
-                                  <li>
-                                    Een wachtrijpagina waar uitgeleende materialen digitaal kunnen worden ondertekend via een QR-code of met een handtekening.
-                                    Dankzij SignalR wordt de handtekening real-time bijgewerkt.
-                                  </li>
-                               </ul>
+                                <p class="font-weight-bold text-muted">Belangrijke functies:</p>
                             </td>
-                         </tr>
+                            <td>
+                                <ul>
+                                    <li>Materialen uitlenen en retourneren.</li>
+                                    <li>Een overzicht van uitleengeschiedenis per item.</li>
+                                    <li>Een personeelsbeheerpagina met uitleengeschiedenis.</li>
+                                    <li>Een categoriepagina voor verschillende materiaalsoorten.</li>
+                                    <li>
+                                        Een wachtrijpagina waar uitgeleende materialen digitaal kunnen worden
+                                        ondertekend via een QR-code of met een handtekening.
+                                        Dankzij SignalR wordt de handtekening real-time bijgewerkt.
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
                     </p>
                 </div>
                 <div class="about-img-holder">
-                    <img src="../assets/images/Uitleensysteem/uitleenhomepage.PNG" class="about-img" alt="uitleensysteem">
+                    <video id="my-video" class="video-js" controls preload="auto" width="333" height="150"
+                        poster="../assets/images/Uitleensysteem/2024-06-10 21-00-58.mp4" data-setup="{}">
+                        <source src="../assets/images/Uitleensysteem/2024-06-10 21-00-58.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
                 </div>
             </div><!-- end of uitleensysteem wrapper -->
         </div><!-- end of container -->
@@ -118,30 +138,41 @@
         <div class="container text-center">
             <!-- about wrapper -->
             <div class="about">
-                <div class="about-img-holder">
-                    <img src="../assets/images/Incheck kiosk/kioskhomepage.PNG" class="about-img" alt="kiosk">
-                </div>
                 <div class="about-caption">
                     <h2 class="section-title mb-3">Incheck Kiosk De Varens <Del></Del></h2>
                     <p>
-                        Een innovatieve incheckkiosk ontwikkeld met WebAssembly, waarbij alle processen volledig client-side plaatsvinden zonder tussenkomst van een server. 
+                        Een innovatieve incheckkiosk ontwikkeld met WebAssembly, waarbij alle processen volledig
+                        client-side plaatsvinden zonder tussenkomst van een server.
                         De kiosk communiceert met een API en biedt twee pagina's:
-                        
+
                         <tr>
                             <td>
-                               <ol>
-                                  <li>
-                                    Check-in pagina: Bezoekers vullen hun naam, reden van bezoek, en contactgegevens in (e-mail of telefoon).
-                                    Hierna ontvangen zij een e-mail of sms met de wifi-code.
-                                  </li>
-                                  <li>
-                                    Check-out pagina: Bezoekers kunnen hun naam selecteren uit een lijst en uitchecken, waardoor de wifi-code wordt gedeactiveerd.
-                                    Dit systeem is snel, efficiënt en zorgt voor een naadloze gebruikerservaring.
-                                  </li>
-                               </ol>
+                                <ol>
+                                    <li>
+                                        Check-in pagina: Bezoekers vullen hun naam, reden van bezoek, en contactgegevens
+                                        in (e-mail of telefoon).
+                                        Hierna ontvangen zij een e-mail of sms met de wifi-code.
+                                    </li>
+                                    <li>
+                                        Check-out pagina: Bezoekers kunnen hun naam selecteren uit een lijst en
+                                        uitchecken, waardoor de wifi-code wordt gedeactiveerd.
+                                        Dit systeem is snel, efficiënt en zorgt voor een naadloze gebruikerservaring.
+                                    </li>
+                                </ol>
                             </td>
-                         </tr>
+                        </tr>
+                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
                     </p>
+                </div>
+                <div class="about-img-holder">
+                    <video id="my-video" class="video-js" controls preload="auto" width="333" height="150"
+                        poster="../assets/images/Incheck kiosk/2024-06-10 20-51-07.mp4" data-setup="{}">
+                        <source src="../assets/images/Incheck kiosk/2024-06-10 20-51-07.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
                 </div>
             </div><!-- end of kiosk wrapper -->
         </div><!-- end of container -->
@@ -154,23 +185,38 @@
             <!-- about webshop bug fix -->
             <div class="about">
                 <div class="about-caption">
-                    <h2 class="section-title mb-3">MVC Webshop bug fix  <Del></Del></h2>
+                    <h2 class="section-title mb-3">MVC Webshop bug fix <Del></Del></h2>
                     <p>
-                        Bij dit project, oorspronkelijk ontwikkeld door Howest-studenten, kreeg ik de opdracht om diverse functionaliteiten te verbeteren en bugs op te lossen. Het project bestond uit een core- en webapplicatie die via een API communiceerden.
+                        Bij dit project, oorspronkelijk ontwikkeld door Howest-studenten, kreeg ik de opdracht om
+                        diverse functionaliteiten te verbeteren en bugs op te lossen. Het project bestond uit een core-
+                        en webapplicatie die via een API communiceerden.
                         <tr>
-                            <td><p class="font-weight-bold text-muted">Mijn bijdragen:</p></td>
                             <td>
-                               <ol>
-                                  <li>Implementatie van subcategorieën en cascading dropdowns om filters te verbeteren.</li>
-                                  <li>Oplossen van een bug waardoor gebruikers niet konden worden gepromoveerd tot admin.</li>
-                                  <li>Toevoegen van sluitingsdagen, waarmee de webshop tijdelijk kan worden gesloten.</li>
-                               </ol>
+                                <p class="font-weight-bold text-muted">Mijn bijdragen:</p>
                             </td>
-                         </tr>
+                            <td>
+                                <ol>
+                                    <li>Implementatie van subcategorieën en cascading dropdowns om filters te
+                                        verbeteren.</li>
+                                    <li>Oplossen van een bug waardoor gebruikers niet konden worden gepromoveerd tot
+                                        admin.</li>
+                                    <li>Toevoegen van sluitingsdagen, waarmee de webshop tijdelijk kan worden gesloten.
+                                    </li>
+                                </ol>
+                            </td>
+                        </tr>
+                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
                     </p>
                 </div>
                 <div class="about-img-holder">
-                    <img src="../assets/images/De Varens Webshop/categorypagewebshopdevarens.PNG" class="about-img" alt="webshop bug fix">
+                    <video id="my-video" class="video-js" controls preload="auto" width="333" height="150"
+                        poster="../assets/images/De Varens Webshop/2024-06-10 20-40-19.mp4" data-setup="{}">
+                        <source src="../assets/images/De Varens Webshop/2024-06-10 20-40-19.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a
+                            web browser that
+                            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
                 </div>
             </div><!-- end of webshop bug fix wrapper -->
         </div><!-- end of container -->
@@ -191,13 +237,15 @@
                         Momenteel werk ik aan het ontwerpen en ontwikkelen van een eigen webshop. Deze bestaat uit:
                         <tr>
                             <td>
-                               <ul >
-                                  <li>Een backend API om alle functionaliteit te ondersteunen.</li>
-                                  <li>Een Blazor-admin dashboard voor beheer van producten, categorieën en bestellingen.</li>
-                                  <li>De frontend van de webshop is in ontwikkeling en zal zorgvuldig worden afgestemd op de gebruikerservaring.</li>
-                               </ul>
+                                <ul>
+                                    <li>Een backend API om alle functionaliteit te ondersteunen.</li>
+                                    <li>Een Blazor-admin dashboard voor beheer van producten, categorieën en
+                                        bestellingen.</li>
+                                    <li>De frontend van de webshop is in ontwikkeling en zal zorgvuldig worden afgestemd
+                                        op de gebruikerservaring.</li>
+                                </ul>
                             </td>
-                         </tr>
+                        </tr>
                     </p>
                 </div>
             </div><!-- end of webshop wrapper -->
