@@ -216,7 +216,7 @@
     <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">Heeft u een website nodig? Ga naar de 'Huur mij'-pagina.</p>
-            <p class="section-subtitle">Heef u een vraag?</p>
+            <p class="section-subtitle">Heeft u een vraag?</p>
             <h6 class="section-title mb-5">Contacteer me</h6>
             <!-- contact form -->
             <form onsubmit="sendContactEmail(); return false;" class="contact-form col-md-10 col-lg-8 m-auto">
@@ -232,12 +232,16 @@
                             placeholder="Schrijf iets"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <input id="submitButton" type="submit" value="Bericht Verzenden"
-                            class="btn btn-outline-primary rounded">
+                        <button id="submitButton" type="submit"
+                            class="btn btn-outline-primary rounded">Bericht Verzenden</button>
                     </div>
                 </div>
             </form><!-- end of contact form -->
         </div><!-- end of container -->
+        <div id="customAlert" class="custom-alert hidden">
+            <span id="alertMessage"></span>
+            <button onclick="closeCustomAlert()">OK</button>
+        </div>
     </section><!-- end of contact section -->
 
     <!-- footer -->
@@ -270,7 +274,7 @@
             (function ()
             {
                 emailjs.init({
-                    publicKey: "",
+                    publicKey: "RbdU9YtdgPr-bp4NC",
                 });
             })();
     </script>

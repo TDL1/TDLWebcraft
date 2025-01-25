@@ -71,8 +71,8 @@ function sendContactEmail()
             from_email: document.getElementById('email').value,
             message: document.getElementById('message').value
         }
-        const serviceID = "";
-        const templateID = "";
+        const serviceID = "service_vdw2ylp";
+        const templateID = "template_by9n8xi";
 
         emailjs.send(serviceID, templateID, templateParams).then(
             (response) =>
@@ -106,12 +106,12 @@ function sendHireMeEmail()
             from_name: document.getElementById('name').value,
             from_email: document.getElementById('email').value,
             phone: document.getElementById('phone').value,
-            location: document.getElementById('company').value,
+            company: document.getElementById('company').value,
             description: document.getElementById('description').value
         }
 
-        const serviceID = "";
-        const templateID = "";
+        const serviceID = "service_vdw2ylp";
+        const templateID = "template_2wsidgk";
 
         emailjs.send(serviceID, templateID, templateParams).then(
             (response) =>
