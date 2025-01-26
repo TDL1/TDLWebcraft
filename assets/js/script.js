@@ -131,3 +131,112 @@ function sendHireMeEmail()
         showCustomAlert("Er is een onverwachte fout opgetreden. Probeer het later opnieuw.");
     }
 }
+
+document.addEventListener("DOMContentLoaded", () =>
+{
+    const textElements = document.querySelectorAll("[data-translate]");
+    const placeholderElements = document.querySelectorAll("[data-translate-placeholder]");
+    const langDropdownItems = document.querySelectorAll(".dropdown-item");
+    const langDropdownButton = document.getElementById("langDropdownButton");
+
+    // Function to load translations
+    async function loadTranslations(lang)
+    {
+        try
+        {
+            const response = await fetch("../assets/languages/translations.json");
+            const translations = await response.json();
+
+            // Update text content
+            textElements.forEach((el) =>
+            {
+                const key = el.getAttribute("data-translate");
+                if (translations[lang][key])
+                {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            // Update placeholders
+            placeholderElements.forEach((el) =>
+            {
+                const key = el.getAttribute("data-translate-placeholder");
+                if (translations[lang][key])
+                {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+
+            // Save selected language to localStorage
+            localStorage.setItem("language", lang);
+
+            // Update dropdown button text
+            langDropdownButton.textContent = lang === "en" ? "English" : "Nederlands";
+        } catch (error)
+        {
+            console.error("Error loading translations:", error);
+        }
+    }
+
+    // Event listener for dropdown items
+    langDropdownItems.forEach((item) =>
+    {
+        item.addEventListener("click", (e) =>
+        {
+            e.preventDefault();
+            const selectedLang = item.getAttribute("data-lang");
+            loadTranslations(selectedLang);
+        });
+    });
+
+    // Load the default language on page load
+    const defaultLang = localStorage.getItem("language") || "en";
+    loadTranslations(defaultLang);
+});
+
+
+document.addEventListener("DOMContentLoaded", () =>
+{
+    const langSwitcher = document.getElementById("lang-switcher");
+    const downloadLink = document.getElementById("downloadCv");
+    const cvLink = document.getElementById("cv");
+
+    // Function to update the download link
+    function updateDownloadLink(lang)
+    {
+        if (lang === "en")
+        {
+            downloadLink.href = "/";
+            downloadLink.download = "cv-tristan-delaere-english.pdf";
+        } else if (lang === "nl")
+        {
+            downloadLink.href = "/";
+            downloadLink.download = "cv-tristan-delaere.pdf";
+        }
+    }
+
+    function updateCvLink(lang)
+    {
+        if (lang === "en")
+        {
+            cvLink.href = "cv-tristan-delaere-english.pdf";
+        } else if (lang === "nl")
+        {
+            cvLink.href = "cv-tristan-delaere.pdf";
+        }
+    }
+
+    // Update the download link when the language changes
+    langSwitcher.addEventListener("change", (e) =>
+    {
+        const selectedLang = e.target.value;
+        updateDownloadLink(selectedLang);
+        updateCvLink(selectedLang);
+    });
+
+    // Set default language and update the link
+    const defaultLang = localStorage.getItem("language") || "en";
+    langSwitcher.value = defaultLang;
+    updateDownloadLink(defaultLang);
+    updateCvLink(defaultLang);
+});

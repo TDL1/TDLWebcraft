@@ -23,7 +23,7 @@
                     <a class="link" href="/">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="/#about">Over mij</a>
+                    <a class="link" href="/#about" data-translate="about"></a>
                 </li>
                 <li class="item">
                     <a class="link" href="/portfolio/">Portfolio</a>
@@ -32,9 +32,18 @@
                     <a class="link" href="#contact">Contact</a>
                 </li>
                 <li class="item ml-md-3">
-                    <a href="/hireme/" class="btn btn-primary">Huur Mij In</a>
+                    <a href="/hireme/" class="btn btn-primary" data-translate="hireMeNow"></a>
                 </li>
             </ul>
+            <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="langDropdownButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div id="lang-switcher" class="dropdown-menu" aria-labelledby="langDropdownButton">
+                    <a class="dropdown-item" href="#" data-lang="en">English</a>
+                    <a class="dropdown-item" href="#" data-lang="nl">Nederlands</a>
+                </div>
+            </div>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
@@ -49,7 +58,7 @@
         <div class="header-content container">
             <h1 class="header-title">
                 <span class="down">Portfolio</span>
-                <p class="header-subtitle">Bekijk hieronder mijn projecten</p>
+                <p class="header-subtitle" data-translate="projectsIntro"></p>
             </h1>
         </div>
     </header><!-- end of page header -->
@@ -66,15 +75,10 @@
                 </div>
                 <div class="about-caption">
                     <h2 class="section-title mb-3">Website Vloerwerken Delaere <Del></Del></h2>
-                    <p>
-                        Een statische website ontworpen en gebouwd met HTML, CSS en JavaScript voor het vloerwerkbedrijf
-                        Vloerwerken Delaere van mijn vader.
-                        De website is eenvoudig, gebruiksvriendelijk en biedt een professioneel online visitekaartje
-                        voor het bedrijf.
-                        Bezoek de site hieronder.
+                    <p data-translate="vloerwerkenDescription">
                     </p>
                     <a href="https://www.vloerwerkendelaere.be">
-                        <button class="btn-rounded btn btn-outline-primary mt-4">Bezoek site</button>
+                        <button class="btn-rounded btn btn-outline-primary mt-4" data-translate="visitSite"></button>
                     </a>
                 </div>
             </div><!-- end of vloerwerkendelaere wrapper -->
@@ -88,34 +92,24 @@
             <!-- uitleensysteem wrapper -->
             <div class="about">
                 <div class="about-caption">
-                    <h2 class="section-title mb-3">Uitleensysteem De Varens <Del></Del></h2>
-                    <p>
-                        Een uitgebreid uitleensysteem ontwikkeld binnen het bestaande Blazor-project van de school De
-                        Varens.
-                        Dit systeem bevat verschillende materiaalpagina’s, zoals multimedia, boeken, sleutels,
-                        printkaarten en andere items.
-                        Elke pagina heeft volledige CRUD-functionaliteit, waarmee beheerders materialen kunnen
-                        toevoegen, bewerken, bekijken en verwijderen.
+                    <h2 class="section-title mb-3" data-translate="lendingSystemTitle"> <Del></Del></h2>
+                    <p data-translate="lendingSystemDescription">
 
                         <tr>
                             <td>
-                                <p class="font-weight-bold text-muted">Belangrijke functies:</p>
+                                <p class="font-weight-bold text-muted" data-translate="keyFeatures"></p>
                             </td>
                             <td>
                                 <ul>
-                                    <li>Materialen uitlenen en retourneren.</li>
-                                    <li>Een overzicht van uitleengeschiedenis per item.</li>
-                                    <li>Een personeelsbeheerpagina met uitleengeschiedenis.</li>
-                                    <li>Een categoriepagina voor verschillende materiaalsoorten.</li>
-                                    <li>
-                                        Een wachtrijpagina waar uitgeleende materialen digitaal kunnen worden
-                                        ondertekend via een QR-code of met een handtekening.
-                                        Dankzij SignalR wordt de handtekening real-time bijgewerkt.
-                                    </li>
+                                    <li data-translate="lendingMaterials"></li>
+                                    <li data-translate="itemHistory"></li>
+                                    <li data-translate="staffManagement"></li>
+                                    <li data-translate="categoryPage"></li>
+                                    <li data-translate="queuePage"></li>
                                 </ul>
                             </td>
                         </tr>
-                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
+                        <b data-translate="projectVideo"></b>
                     </p>
                 </div>
                 <div class="about-img-holder">
@@ -141,28 +135,18 @@
             <div class="about">
                 <div class="about-caption">
                     <h2 class="section-title mb-3">Incheck Kiosk De Varens <Del></Del></h2>
-                    <p>
-                        Een innovatieve incheckkiosk ontwikkeld met WebAssembly, waarbij alle processen volledig
-                        client-side plaatsvinden zonder tussenkomst van een server.
-                        De kiosk communiceert met een API en biedt twee pagina's:
-
+                    <p data-translate="innovativeKiosk">
                         <tr>
                             <td>
                                 <ol>
-                                    <li>
-                                        Check-in pagina: Bezoekers vullen hun naam, reden van bezoek, en contactgegevens
-                                        in (e-mail of telefoon).
-                                        Hierna ontvangen zij een e-mail of sms met de wifi-code.
+                                    <li data-translate="checkInPage">
                                     </li>
-                                    <li>
-                                        Check-out pagina: Bezoekers kunnen hun naam selecteren uit een lijst en
-                                        uitchecken, waardoor de wifi-code wordt gedeactiveerd.
-                                        Dit systeem is snel, efficiënt en zorgt voor een naadloze gebruikerservaring.
+                                    <li data-translate="checkOutPage">
                                     </li>
                                 </ol>
                             </td>
                         </tr>
-                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
+                        <b data-translate="projectVideo"></b>
                     </p>
                 </div>
                 <div class="about-img-holder">
@@ -187,26 +171,21 @@
             <div class="about">
                 <div class="about-caption">
                     <h2 class="section-title mb-3">MVC Webshop bug fix <Del></Del></h2>
-                    <p>
-                        Bij dit project, oorspronkelijk ontwikkeld door Howest-studenten, kreeg ik de opdracht om
-                        diverse functionaliteiten te verbeteren en bugs op te lossen. Het project bestond uit een core-
-                        en webapplicatie die via een API communiceerden.
+                    <p data-translate="howestProject">
                         <tr>
                             <td>
-                                <p class="font-weight-bold text-muted">Mijn bijdragen:</p>
+                                <p class="font-weight-bold text-muted" data-translate="myContributions">Mijn bijdragen:
+                                </p>
                             </td>
                             <td>
                                 <ol>
-                                    <li>Implementatie van subcategorieën en cascading dropdowns om filters te
-                                        verbeteren.</li>
-                                    <li>Oplossen van een bug waardoor gebruikers niet konden worden gepromoveerd tot
-                                        admin.</li>
-                                    <li>Toevoegen van sluitingsdagen, waarmee de webshop tijdelijk kan worden gesloten.
-                                    </li>
+                                    <li data-translate="subcategories"></li>
+                                    <li data-translate="adminBugFix"></li>
+                                    <li data-translate="closingDays"></li>
                                 </ol>
                             </td>
                         </tr>
-                        <b>Hier naast/onder ziet u een video van de algemene werking van dit project.</b>
+                        <b data-translate="projectVideo"></b>
                     </p>
                 </div>
                 <div class="about-img-holder">
@@ -233,17 +212,14 @@
                     <img src="../assets/images/Eigen Webshop/comingsoon.jpg" class="about-img" alt="coming soon">
                 </div>
                 <div class="about-caption">
-                    <h2 class="section-title mb-3">Eigen Webshop <Del></Del></h2>
-                    <p>
-                        Momenteel werk ik aan het ontwerpen en ontwikkelen van een eigen webshop. Deze bestaat uit:
+                    <h2 class="section-title mb-3" data-translate="ownWebshopTitle"> <Del></Del></h2>
+                    <p data-translate="currentWebshop">
                         <tr>
                             <td>
                                 <ul>
-                                    <li>Een backend API om alle functionaliteit te ondersteunen.</li>
-                                    <li>Een Blazor-admin dashboard voor beheer van producten, categorieën en
-                                        bestellingen.</li>
-                                    <li>De frontend van de webshop is in ontwikkeling en zal zorgvuldig worden afgestemd
-                                        op de gebruikerservaring.</li>
+                                    <li data-translate="webshopBackend"></li>
+                                    <li data-translate="webshopAdmin"></li>
+                                    <li data-translate="webshopFrontend"></li>
                                 </ul>
                             </td>
                         </tr>
@@ -261,12 +237,12 @@
             <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Wil je met mij werken?</h6>
-                    <p class="m-0 text-light">Voel u vrij om contact op te nemen & mij in te huren</p>
+                    <h6 class="title text-light" data-translate="workWithMe"></h6>
+                    <p class="m-0 text-light" data-translate="contactMePrompt"></p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
                     <a href="/hireme/">
-                        <button class="btn btn-lg my-font btn-light rounded">Huur Mij In</button>
+                        <button class="btn btn-lg my-font btn-light rounded" data-translate="hireMeNow"></button>
                     </a>
                 </div>
             </div> <!-- end of row -->
@@ -276,25 +252,27 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">Heeft u een website nodig? Ga naar de 'Huur mij'-pagina.</p>
-            <p class="section-subtitle">Heeft u een vraag?</p>
-            <h6 class="section-title mb-5">Contacteer me</h6>
+            <p class="section-subtitle" data-translate="needWebsite"></p>
+            <p class="section-subtitle" data-translate="haveQuestion"></p>
+            <h6 class="section-title mb-5" data-translate="contactMe"></h6>
             <!-- contact form -->
             <form onsubmit="sendContactEmail(); return false;" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id="name" type="text" size="50" class="form-control" placeholder="Uw naam" required>
+                        <input id="name" type="text" size="50" class="form-control"
+                            data-translate-placeholder="yourName" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="email" type="email" class="form-control" placeholder="Uw e-mailadres" requried>
+                        <input id="email" type="email" class="form-control" data-translate-placeholder="yourEmail"
+                            requried>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="message" id="message" rows="6" class="form-control"
-                            placeholder="Schrijf iets"></textarea>
+                            data-translate-placeholder="writeSomething"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <button id="submitButton" type="submit"
-                         class="btn btn-outline-primary rounded">Bericht Verzenden</button>
+                        <button id="submitButton" type="submit" class="btn btn-outline-primary rounded"
+                            data-translate="sendMessage"></button>
                     </div>
                 </div>
             </form><!-- end of contact form -->

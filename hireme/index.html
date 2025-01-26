@@ -23,7 +23,7 @@
                     <a class="link" href="/">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="/#about">Over mij</a>
+                    <a class="link" href="/#about" data-translate="about"></a>
                 </li>
                 <li class="item">
                     <a class="link" href="/portfolio/">Portfolio</a>
@@ -32,9 +32,18 @@
                     <a class="link" href="#contact">Contact</a>
                 </li>
                 <li class="item ml-md-3">
-                    <a href="#" class="btn btn-primary">Huur Mij In</a>
+                    <a href="#" class="btn btn-primary" data-translate="hireMeNow"></a>
                 </li>
             </ul>
+            <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="langDropdownButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div id="lang-switcher" class="dropdown-menu" aria-labelledby="langDropdownButton">
+                    <a class="dropdown-item" href="#" data-lang="en">English</a>
+                    <a class="dropdown-item" href="#" data-lang="nl">Nederlands</a>
+                </div>
+            </div>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
@@ -48,8 +57,8 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="down">Huur Mij In</span>
-                <p class="header-subtitle">Ik tracht steeds binnen 2 werkdagen te antwoorden op uw aanvragen.</p>
+                <span class="down" data-translate="hireMeNow"></span>
+                <p class="header-subtitle" data-translate="responseTime"></p>
             </h1>
         </div>
     </header><!-- end of page header -->
@@ -57,29 +66,34 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">Heeft u een website nodig?</p>
-            <h6 class="section-title mb-5">Huur mij in</h6>
+            <p class="section-subtitle" data-translate="needWebsiteShort"></p>
+            <h6 class="section-title mb-5" data-translate="hireMeNow"></h6>
             <!-- contact form -->
             <form onsubmit="sendHireMeEmail(); return false;" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id="name" type="text" size="50" class="form-control" placeholder="Uw naam" required>
+                        <input id="name" type="text" size="50" class="form-control"
+                            data-translate-placeholder="yourName" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="email" type="email" class="form-control" placeholder="Uw e-mailadres" requried>
+                        <input id="email" type="email" class="form-control" data-translate-placeholder="yourEmail"
+                            requried>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="phone" type="tel" size="50" class="form-control" placeholder="Telefoon" required>
+                        <input id="phone" type="tel" size="50" class="form-control" data-translate-placeholder="phone"
+                            required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="company" type="text" size="50" class="form-control" placeholder="Uw bedrijf" required>
+                        <input id="company" type="text" size="50" class="form-control"
+                            data-translate-placeholder="yourCompany" required>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="description" id="description" rows="10" class="form-control"
-                            placeholder="Beschrijf de benodigheden van uw project"></textarea>
+                            data-translate-placeholder="describeProject"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <button id="submitButton" type="submit" class="btn btn-outline-primary rounded">Bericht Verzenden</button>
+                        <button id="submitButton" type="submit" class="btn btn-outline-primary rounded"
+                            data-translate="sendMessage"></button>
                     </div>
                 </div>
             </form><!-- end of contact form -->
@@ -97,8 +111,8 @@
             <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Bekijk mijn projecten</h6>
-                    <p class="m-0 text-light">Voel u vrij om contact op te nemen als u vragen heeft</p>
+                    <h6 class="title text-light" data-translate="viewProjects"></h6>
+                    <p class="m-0 text-light" data-translate="feelFreeContact"></p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
                     <a href="/portfolio/">
@@ -112,23 +126,26 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">Heeft u een vraag?</p>
-            <h6 class="section-title mb-5">Contacteer me</h6>
+            <p class="section-subtitle" data-translate="haveQuestion"></p>
+            <h6 class="section-title mb-5" data-translate="contactMe"></h6>
             <!-- contact form -->
             <form onsubmit="sendContactEmail(); return false;" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id="name" type="text" size="50" class="form-control" placeholder="Uw naam" required>
+                        <input id="name" type="text" size="50" class="form-control"
+                            data-translate-placeholder="yourName" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="email" type="email" class="form-control" placeholder="Uw e-mailadres" requried>
+                        <input id="email" type="email" class="form-control" data-translate-placeholder="yourEmail"
+                            requried>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="message" id="message" rows="6" class="form-control"
-                            placeholder="Schrijf iets"></textarea>
+                            data-translate-placeholder="writeSomething"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
-                        <button id="submitButton" type="submit" class="btn btn-outline-primary rounded">Bericht Verzenden</button>
+                        <button id="submitButton" type="submit" class="btn btn-outline-primary rounded"
+                            data-translate="sendMessage"></button>
                     </div>
                 </div>
             </form><!-- end of contact form -->
@@ -166,12 +183,12 @@
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function ()
-        {
-        emailjs.init({
-            publicKey: "RbdU9YtdgPr-bp4NC",
-        });
-        })();
+            (function ()
+            {
+                emailjs.init({
+                    publicKey: "RbdU9YtdgPr-bp4NC",
+                });
+            })();
     </script>
 
 </body>

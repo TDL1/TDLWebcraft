@@ -13001,7 +13001,7 @@ pre .code {
 }
 
 @media (max-width: 991.98px) {
-  .custom-navbar .hamburger {
+  .custom-navbar .dropdown {
     margin-left: auto;
   }
 
@@ -13388,4 +13388,41 @@ pre .code {
 
 .custom-alert button:hover {
   background: #6c757d;
+}
+
+/* Default dropdown button style */
+.custom-navbar .btn-outline-secondary {
+  color: #fff;
+  /* White text */
+  border-color: #fff;
+  /* White border */
+}
+
+/* Hover state for dropdown button */
+.custom-navbar .btn-outline-secondary:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/* Style when the navbar is affixed */
+.custom-navbar.affix .btn-outline-secondary {
+  color: #393e46;
+  /* Gray text */
+  border-color: #393e46;
+  /* Gray border */
+}
+
+.custom-navbar.affix .btn-outline-secondary[aria-expanded="true"] {
+  color: #393e46;
+  /* White text when open */
+  background-color: #fff;
+  /* Gray background for better visibility */
+  border-color: #393e46;
+}
+
+/* Hover state for affixed dropdown button */
+.custom-navbar.affix .btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #393e46;
+  border-color: #393e46;
 }

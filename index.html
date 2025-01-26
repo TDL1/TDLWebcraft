@@ -22,7 +22,7 @@
                     <a class="link" href="/">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#about">Over mij</a>
+                    <a class="link" href="#about" data-translate="about"></a>
                 </li>
                 <li class="item">
                     <a class="link" href="/portfolio/">Portfolio</a>
@@ -31,9 +31,18 @@
                     <a class="link" href="#contact">Contact</a>
                 </li>
                 <li class="item ml-md-3">
-                    <a href="/hireme/" class="btn btn-primary">Huur Mij</a>
+                    <a href="/hireme/" class="btn btn-primary" data-translate="hireMe"></a>
                 </li>
             </ul>
+            <div class="dropdown d-inline-block">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="langDropdownButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </button>
+                <div id="lang-switcher" class="dropdown-menu" aria-labelledby="langDropdownButton">
+                    <a class="dropdown-item" href="#" data-lang="en">English</a>
+                    <a class="dropdown-item" href="#" data-lang="nl">Nederlands</a>
+                </div>
+            </div>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
                     <div class="hamburger-inner"></div>
@@ -47,12 +56,12 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="up">HALLO!</span>
-                <span class="down">Ik ben Tristan Delaere</span>
+                <span class="up" data-translate="hello"></span>
+                <span class="down" data-translate="intro"></span>
             </h1>
             <p class="header-subtitle">Full Stack Developer</p>
             <a href="/portfolio">
-                <button class="btn btn-primary">Bekijk Mijn Werk</button>
+                <button class="btn btn-primary" data-translate="viewWork"></button>
             </a>
         </div>
     </header><!-- end of page header -->
@@ -67,16 +76,16 @@
                     <img src="assets/images/aboutme.png" class="about-img" alt="about me">
                 </div>
                 <div class="about-caption">
-                    <p class="section-subtitle">Wie Ben Ik?</p>
-                    <h2 class="section-title mb-3">Over mij</h2>
-                    <p>
-                        Gemotiveerde programmeur met een diploma Graduaat Programmmeren. Ervaring in het ontwikkelen,
-                        onderhouden en uitbreiden van webapplicaties en systemen, met focus op gebruiksvriendelijke en
-                        efficiënte oplossingen. Sterk in het analyseren en oplossen van technische problemen, met kennis
-                        van moderne frameworks en tools zoals Blazor. Altijd bereid om nieuwe technologieën en
-                        uitdagingen aan te gaan.
-                    </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    <p class="section-subtitle" data-translate="whoAmI"></p>
+                    <h2 class="section-title mb-3" data-translate="about"></h2>
+                    <p data-translate="aboutMeParagraph">
+                    </p>    
+                    <a id="cv" href="cv-tristan-delaere.pdf">
+                        <button class="btn-rounded btn btn-outline-primary mt-4">CV</button>
+                    </a> 
+                    <a id="downloadCv" href="/" download="cv-tristan-delaere.pdf">
+                        <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                    </a>               
                 </div>
             </div><!-- end of about wrapper -->
         </div><!-- end of container -->
@@ -85,7 +94,7 @@
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
-            <p class="section-subtitle">Wat Kan Ik?</p>
+            <p class="section-subtitle" data-translate="skillsTitle"></p>
             <h6 class="section-title mb-6">Skills</h6>
             <!-- row -->
             <div class="row">
@@ -94,9 +103,7 @@
                         <div class="body">
                             <img src="assets/images/responsive.svg" alt="pencil-case" class="icon">
                             <h6 class="title">HTML/CSS/Javascript</h6>
-                            <p class="subtitle">
-                                Ik gebruik HTML, CSS en Javascript om moderne en responsieve statische websites te
-                                ontwerpen en bouwen.
+                            <p class="subtitle" style="font-size: 13px;" data-translate="skillsHtml">
                             </p>
                         </div>
                     </div>
@@ -106,9 +113,7 @@
                         <div class="body">
                             <img src="assets/images/toolbox.svg" alt="responsive" class="icon">
                             <h6 class="title">C#</h6>
-                            <p class="subtitle" style="font-size: 13px;">
-                                C# is mijn programmeertaal naar keuze. Hierbij werk ik met technologieën zoals Blazor,
-                                MVC, API’s, Entity Framework Core, WPF en Xamarin Forms.
+                            <p class="subtitle" style="font-size: 13px;" data-translate="skillsCsharp"> 
                             </p>
                         </div>
                     </div>
@@ -118,9 +123,7 @@
                         <div class="body">
                             <img src="assets/images/toolbox.svg" alt="toolbox" class="icon">
                             <h6 class="title">SQL Databases</h6>
-                            <p class="subtitle">
-                                Ik gebruik SQL-databases voornamelijk als backend, vaak in combinatie met Entity
-                                Framework Core.
+                            <p class="subtitle" style="font-size: 13px;" data-translate="skillsSql">
                             </p>
                         </div>
                     </div>
@@ -130,9 +133,7 @@
                         <div class="body">
                             <img src="assets/images/analytics.svg" alt="analytics" class="icon">
                             <h6 class="title">Git/Github</h6>
-                            <p class="subtitle">
-                                Git en GitHub zijn mijn tools voor versiebeheer en continue integratie, zodat ik
-                                efficiënt en georganiseerd kan werken.
+                            <p class="subtitle" style="font-size: 13px;" data-translate="skillsGit">
                             </p>
                         </div>
                     </div>
@@ -141,10 +142,19 @@
         </div>
     </section><!-- end of service section -->
 
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle" data-translate="servicesTitle"></p>
+            <h6 class="section-title mb-6">Services</h6>
+            <p data-translate="servicesParagraph"></p>
+            <p data-translate="servicesQuestions"></p>
+        </div>
+    </section><!-- end of service section -->
+
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
-            <p class="section-subtitle">Wat Heb Ik Gedaan?</p>
+            <p class="section-subtitle" data-translate="portfolioTitle"></p>
             <h6 class="section-title mb-6">Portfolio</h6>
             <!-- row -->
             <div class="row">
@@ -155,7 +165,7 @@
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>HTML,CSS,Javascript</h5>
-                                    <p class="font-weight-normal">Vloerwerken Delaere Website</p>
+                                    <p class="font-weight-normal">Website Vloerwerken Delaere</p>
                             </span>
                         </span>
                     </a>
@@ -179,14 +189,14 @@
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>.NET Blazor</h5>
-                                    <p class="font-weight-normal">Uitleensysteem De Varens</p>
+                                    <p class="font-weight-normal" data-translate="lendingSystemTitle">Uitleensysteem De Varens</p>
                             </span>
                         </span>
                     </a>
                 </div>
                 <div class="col-md">
                     <a href="/portfolio">
-                        <button class="btn-rounded btn btn-outline-primary mt-4">Bekijk Mijn Portfolio</button>
+                        <button class="btn-rounded btn btn-outline-primary mt-4" data-translate="viewPortfolio"></button>
                     </a>
                 </div>
             </div><!-- end of row -->
@@ -200,12 +210,12 @@
             <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Wil je met mij werken?</h6>
-                    <p class="m-0 text-light">Voel u vrij om contact op te nemen & mij in te huren</p>
+                    <h6 class="title text-light" data-translate="workWithMe"></h6>
+                    <p class="m-0 text-light" data-translate="contactMePrompt"></p>
                 </div>
                 <div class="col-sm offset-sm-2 offset-md-3">
                     <a href="/hireme/">
-                        <button class="btn btn-lg my-font btn-light rounded">Huur Mij In</button>
+                        <button class="btn btn-lg my-font btn-light rounded" data-translate="hireMeNow"></button>
                     </a>
                 </div>
             </div> <!-- end of row -->
@@ -215,25 +225,25 @@
     <!-- contact section -->
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">Heeft u een website nodig? Ga naar de 'Huur mij'-pagina.</p>
-            <p class="section-subtitle">Heeft u een vraag?</p>
-            <h6 class="section-title mb-5">Contacteer me</h6>
+            <p class="section-subtitle" data-translate="needWebsite"></p>
+            <p class="section-subtitle" data-translate="haveQuestion"></p>
+            <h6 class="section-title mb-5" data-translate="contactMe"></h6>
             <!-- contact form -->
             <form onsubmit="sendContactEmail(); return false;" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
-                        <input id="name" type="text" size="50" class="form-control" placeholder="Uw naam" required>
+                        <input id="name" type="text" size="50" class="form-control" data-translate-placeholder="yourName" required>
                     </div>
                     <div class="form-group col-sm-6">
-                        <input id="email" type="email" class="form-control" placeholder="Uw e-mailadres" requried>
+                        <input id="email" type="email" class="form-control" data-translate-placeholder="yourEmail" requried>
                     </div>
                     <div class="form-group col-sm-12">
                         <textarea name="message" id="message" rows="6" class="form-control"
-                            placeholder="Schrijf iets"></textarea>
+                        data-translate-placeholder="writeSomething"></textarea>
                     </div>
                     <div class="form-group col-sm-12 mt-3">
                         <button id="submitButton" type="submit"
-                            class="btn btn-outline-primary rounded">Bericht Verzenden</button>
+                            class="btn btn-outline-primary rounded" data-translate="sendMessage"></button>
                     </div>
                 </div>
             </form><!-- end of contact form -->
