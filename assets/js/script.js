@@ -132,37 +132,39 @@ function sendHireMeEmail()
     }
 }
 
-document.addEventListener("DOMContentLoaded", () =>
-{
+document.addEventListener("DOMContentLoaded", () => {
     const textElements = document.querySelectorAll("[data-translate]");
     const placeholderElements = document.querySelectorAll("[data-translate-placeholder]");
     const langDropdownItems = document.querySelectorAll(".dropdown-item");
     const langDropdownButton = document.getElementById("langDropdownButton");
 
+    // Function to get the correct path for translations.json
+    function getTranslationsPath() {
+        const basePath = window.location.pathname; // Get the current path
+        const depth = basePath.split("/").length - 2; // Calculate depth of the current file
+        const prefix = "../".repeat(depth); // Add "../" based on depth
+        return `${prefix}assets/languages/translations.json`;
+    }
+
     // Function to load translations
-    async function loadTranslations(lang)
-    {
-        try
-        {
-            const response = await fetch("../assets/languages/translations.json");
+    async function loadTranslations(lang) {
+        try {
+            const path = getTranslationsPath(); // Get the correct path dynamically
+            const response = await fetch(path);
             const translations = await response.json();
 
             // Update text content
-            textElements.forEach((el) =>
-            {
+            textElements.forEach((el) => {
                 const key = el.getAttribute("data-translate");
-                if (translations[lang][key])
-                {
+                if (translations[lang][key]) {
                     el.textContent = translations[lang][key];
                 }
             });
 
             // Update placeholders
-            placeholderElements.forEach((el) =>
-            {
+            placeholderElements.forEach((el) => {
                 const key = el.getAttribute("data-translate-placeholder");
-                if (translations[lang][key])
-                {
+                if (translations[lang][key]) {
                     el.placeholder = translations[lang][key];
                 }
             });
@@ -172,17 +174,14 @@ document.addEventListener("DOMContentLoaded", () =>
 
             // Update dropdown button text
             langDropdownButton.textContent = lang === "en" ? "English" : "Nederlands";
-        } catch (error)
-        {
+        } catch (error) {
             console.error("Error loading translations:", error);
         }
     }
 
     // Event listener for dropdown items
-    langDropdownItems.forEach((item) =>
-    {
-        item.addEventListener("click", (e) =>
-        {
+    langDropdownItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
             e.preventDefault();
             const selectedLang = item.getAttribute("data-lang");
             loadTranslations(selectedLang);
