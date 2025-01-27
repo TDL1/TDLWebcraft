@@ -200,11 +200,11 @@ document.addEventListener("DOMContentLoaded", () =>
         if (lang === "en")
         {
             downloadLink.href = "/";
-            downloadLink.download = "cv-tristan-delaere-english.pdf";
+            downloadLink.download = "cv-tristan-delaere-en.pdf";
         } else if (lang === "nl")
         {
             downloadLink.href = "/";
-            downloadLink.download = "cv-tristan-delaere.pdf";
+            downloadLink.download = "cv-tristan-delaere-nl.pdf";
         }
     }
 
@@ -213,10 +213,10 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         if (lang === "en")
         {
-            cvLink.href = "cv-tristan-delaere-english.pdf";
+            cvLink.href = "cv-tristan-delaere-en.pdf";
         } else if (lang === "nl")
         {
-            cvLink.href = "cv-tristan-delaere.pdf";
+            cvLink.href = "cv-tristan-delaere-nl.pdf";
         }
     }
 
