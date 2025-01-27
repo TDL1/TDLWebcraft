@@ -132,14 +132,18 @@ function sendHireMeEmail()
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () =>
+{
     const textElements = document.querySelectorAll("[data-translate]");
     const placeholderElements = document.querySelectorAll("[data-translate-placeholder]");
     const langDropdownItems = document.querySelectorAll(".dropdown-item");
     const langDropdownButton = document.getElementById("langDropdownButton");
+    const downloadLink = document.getElementById("downloadCv");
+    const cvLink = document.getElementById("cv");
 
     // Function to get the correct path for translations.json
-    function getTranslationsPath() {
+    function getTranslationsPath()
+    {
         const basePath = window.location.pathname; // Get the current path
         const depth = basePath.split("/").length - 2; // Calculate depth of the current file
         const prefix = "../".repeat(depth); // Add "../" based on depth
@@ -147,24 +151,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Function to load translations
-    async function loadTranslations(lang) {
-        try {
+    async function loadTranslations(lang)
+    {
+        try
+        {
             const path = getTranslationsPath(); // Get the correct path dynamically
             const response = await fetch(path);
             const translations = await response.json();
 
             // Update text content
-            textElements.forEach((el) => {
+            textElements.forEach((el) =>
+            {
                 const key = el.getAttribute("data-translate");
-                if (translations[lang][key]) {
+                if (translations[lang][key])
+                {
                     el.textContent = translations[lang][key];
                 }
             });
 
             // Update placeholders
-            placeholderElements.forEach((el) => {
+            placeholderElements.forEach((el) =>
+            {
                 const key = el.getAttribute("data-translate-placeholder");
-                if (translations[lang][key]) {
+                if (translations[lang][key])
+                {
                     el.placeholder = translations[lang][key];
                 }
             });
@@ -174,31 +184,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update dropdown button text
             langDropdownButton.textContent = lang === "en" ? "English" : "Nederlands";
-        } catch (error) {
+
+            // Update CV links
+            updateDownloadLink(lang);
+            updateCvLink(lang);
+        } catch (error)
+        {
             console.error("Error loading translations:", error);
         }
     }
-
-    // Event listener for dropdown items
-    langDropdownItems.forEach((item) => {
-        item.addEventListener("click", (e) => {
-            e.preventDefault();
-            const selectedLang = item.getAttribute("data-lang");
-            loadTranslations(selectedLang);
-        });
-    });
-
-    // Load the default language on page load
-    const defaultLang = localStorage.getItem("language") || "en";
-    loadTranslations(defaultLang);
-});
-
-
-document.addEventListener("DOMContentLoaded", () =>
-{
-    const langSwitcher = document.getElementById("lang-switcher");
-    const downloadLink = document.getElementById("downloadCv");
-    const cvLink = document.getElementById("cv");
 
     // Function to update the download link
     function updateDownloadLink(lang)
@@ -214,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () =>
         }
     }
 
+    // Function to update the CV link
     function updateCvLink(lang)
     {
         if (lang === "en")
@@ -225,17 +220,18 @@ document.addEventListener("DOMContentLoaded", () =>
         }
     }
 
-    // Update the download link when the language changes
-    langSwitcher.addEventListener("change", (e) =>
+    // Event listener for dropdown items
+    langDropdownItems.forEach((item) =>
     {
-        const selectedLang = e.target.value;
-        updateDownloadLink(selectedLang);
-        updateCvLink(selectedLang);
+        item.addEventListener("click", (e) =>
+        {
+            e.preventDefault();
+            const selectedLang = item.getAttribute("data-lang");
+            loadTranslations(selectedLang);
+        });
     });
 
-    // Set default language and update the link
+    // Load the default language on page load
     const defaultLang = localStorage.getItem("language") || "en";
-    langSwitcher.value = defaultLang;
-    updateDownloadLink(defaultLang);
-    updateCvLink(defaultLang);
+    loadTranslations(defaultLang);
 });

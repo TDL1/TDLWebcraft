@@ -25,6 +25,7 @@
         "sendMessage": "Send Message",
         "projectsIntro": "View my projects below",
         "vloerwerkenDescription": "A static website designed and built with HTML, CSS, and JavaScript for the flooring company Vloerwerken Delaere, owned by my father. The website is simple, user-friendly, and offers a professional online business card for the company. Visit the site below.",
+        "tdlwebcraftDescription": "A static website, designed and built with HTML, CSS, and JavaScript. The website you are currently visiting. The website is simple, user-friendly, and serves as a professional online business card for myself.",
         "visitSite": "Visit Site",
         "lendingSystemTitle": "Lending System De Varens",
         "ownWebshopTitle": "Own Webshop",
@@ -56,6 +57,7 @@
         "categoryPage": "A category page for different types of materials.",
         "keyFeatures": "Key features:",
         "servicesTitle": "What Do I Offer?",
+        "websiteCreated": "Website created by TDL Webcraft",
         "servicesParagraph": "I offer custom-made static websites for businesses and personal use. You can choose the theme that best suits your needs and decide which pages and functionalities the website should include. Do you have photos or other media you'd like to include on the site? Simply provide them, and I will ensure they are perfectly integrated.",
         "servicesQuestions": "Do you have any questions or specific requests? Feel free to contact me – I am happy to assist you!",
         "lendingSystemDescription": "A comprehensive lending system developed within the existing Blazor project of the school De Varens. This system includes various material pages, such as multimedia, books, keys, print cards, and other items. Each page has full CRUD functionality, allowing administrators to add, edit, view, and delete materials."
@@ -86,6 +88,7 @@
         "sendMessage": "Bericht Verzenden",
         "projectsIntro": "Bekijk hieronder mijn projecten",
         "vloerwerkenDescription": "Een statische website ontworpen en gebouwd met HTML, CSS en JavaScript voor het vloerwerkbedrijf Vloerwerken Delaere van mijn vader. De website is eenvoudig, gebruiksvriendelijk en biedt een professioneel online visitekaartje voor het bedrijf. Bezoek de site hieronder.",
+        "tdlwebcraftDescription": "Een statische website, ontworpen en gebouwd met HTML, CSS en JavaScript. De website waarop u zich nu bevindt. De website is eenvoudig, gebruiksvriendelijk en biedt een professioneel online visitekaartje voor mijzelf.",
         "visitSite": "Bezoek site",
         "lendingSystemTitle": "Uitleensysteem De Varens",
         "ownWebshopTitle": "Eigen Webshop",
@@ -117,6 +120,7 @@
         "categoryPage": "Een categoriepagina voor verschillende materiaalsoorten.",
         "keyFeatures": "Belangrijke functies:",
         "servicesTitle": "Wat Bied Ik Aan?",
+        "websiteCreated": "Website gemaakt door TDL Webcraft",
         "servicesParagraph": "Ik bied op maat gemaakte statische websites aan voor bedrijven en persoonlijk gebruik. U kiest het thema dat het beste bij uw wensen past en bepaalt welke pagina's en functionaliteiten de website moet bevatten. Heeft u foto's of andere media die u op de site wilt opnemen? Lever deze eenvoudig aan, en ik zorg dat ze perfect worden geïntegreerd.",
         "servicesQuestions": "Heeft u vragen of specifieke wensen? Neem gerust contact met mij op – ik help u graag verder!",
         "lendingSystemDescription": "Een uitgebreid uitleensysteem ontwikkeld binnen het bestaande Blazor-project van de school De Varens. Dit systeem bevat verschillende materiaalpagina’s, zoals multimedia, boeken, sleutels, printkaarten en andere items. Elke pagina heeft volledige CRUD-functionaliteit, waarmee beheerders materialen kunnen toevoegen, bewerken, bekijken en verwijderen."
